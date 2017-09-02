@@ -75,6 +75,7 @@ def run_script():
 
     git_cmd = "git clone -c remote.origin.shallow=true " \
               "-c remote.origin.pages={} " \
+              "-c remote.origin.fetchStrategy=by_rev " \
               "mediawiki::{} {}".format(shlex.quote(sites_param),
                                         shlex.quote(URL), TARGET_DIR)
 
