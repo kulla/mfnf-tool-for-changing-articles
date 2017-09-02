@@ -10,10 +10,7 @@ import shlex
 
 import requests
 
-TARGET_DIR = "mfnf"
-URL = "https://de.wikibooks.org/w"
-API_URL = URL + "/api.php"
-PROJECT_NAME = "Mathe für Nicht-Freaks"
+from config import TARGET_DIR, URL, API_URL, PROJECT_NAME
 
 def query_path(obj, path):
     """Returning the path `path` of the JSON object `obj`. Examples:
