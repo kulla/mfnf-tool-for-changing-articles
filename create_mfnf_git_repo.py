@@ -79,7 +79,6 @@ def run_script():
               "mediawiki::{} {}".format(shlex.quote(sites_param),
                                         shlex.quote(URL), TARGET_DIR)
 
-    print(git_cmd)
     os.system(git_cmd)
 
 if __name__ == "__main__":
