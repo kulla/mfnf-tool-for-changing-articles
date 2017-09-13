@@ -4,7 +4,7 @@ import os
 
 from config import TARGET_DIR
 
-def change_articles(func):
+def change(func):
     """Changes all files in the repository using the text changing function
     `func`."""
     for file_name in os.listdir(TARGET_DIR):
