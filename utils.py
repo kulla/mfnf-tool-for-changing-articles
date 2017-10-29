@@ -1,6 +1,7 @@
 """Utility functions for changing the files in the repository."""
 
 import os
+import re
 
 from config import TARGET_DIR
 
@@ -15,3 +16,7 @@ def change(func):
 
             with open(target, "w") as file_handler:
                 file_handler.write(func(source))
+
+def regex_change(regex, match, flags=0):
+    """Changes all files in the repository using `re.sub()`."""
+    change(lambda x: re.sub(regex, match, x, flags=flags))
